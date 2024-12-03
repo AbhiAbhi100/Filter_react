@@ -16,6 +16,7 @@ export default function Home() {
 
   const filterItems = (cat)=>{
       const newItems = data.filter((newval)=> newval.albumId===cat)
+      console.log(newItems);
       setData(newItems);
   }
   
@@ -61,7 +62,7 @@ export default function Home() {
     setData(originalData); 
   };
 
-  
+
 
 
   return (
