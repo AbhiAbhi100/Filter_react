@@ -30,6 +30,25 @@ export default function Home() {
       setData(results);
       setOriginalData(results); //original data me value dal rhe search se hatane ko
     };
+
+    const fetchMovieData = async () => {
+      const options = {
+          method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZjdiZWI2ODZjN2JmZjRiZGYzMzk0YTJjYWJlZjE2MCIsIm5iZiI6MTczMzI0NDg0MS4yMTcsInN1YiI6IjY3NGYzN2E5ODczNTNiYTFjNDhjNjU4MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5GFUjIBtQDSwmXBV3ixJFACypYHi2YfPC_Y0gKtheck',
+        },
+      };
+
+      const response = await fetch(
+        'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
+        options
+      );
+      const data = await response.json();
+      console.log('movie data : ', data);
+    };
+    fetchMovieData();
     fetchData();
   }, []);
 
