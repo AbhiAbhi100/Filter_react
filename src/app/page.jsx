@@ -33,11 +33,10 @@ export default function Home() {
 
     const fetchMovieData = async () => {
       const options = {
-          method: 'GET',
+        method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization:
-            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZjdiZWI2ODZjN2JmZjRiZGYzMzk0YTJjYWJlZjE2MCIsIm5iZiI6MTczMzI0NDg0MS4yMTcsInN1YiI6IjY3NGYzN2E5ODczNTNiYTFjNDhjNjU4MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5GFUjIBtQDSwmXBV3ixJFACypYHi2YfPC_Y0gKtheck',
+          Authorization: 'Bearer xxxxxxxxxxxxxxxxx',
         },
       };
 
